@@ -1,0 +1,13 @@
+#%Module
+#
+proc ModulesHelp { } {
+        puts stderr " "
+        puts stderr "\t This module installs erlang"
+        puts stderr " "
+}
+
+module-whatis   "installs erlang 19.0"
+
+set package_root /home/srinivm/CentOS7/software/erlang/19.0
+
+prepend-path PATH ${package_root}/bin

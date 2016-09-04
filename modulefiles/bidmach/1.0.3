@@ -1,0 +1,14 @@
+#%Module
+#
+proc ModulesHelp { } {
+        puts stderr " "
+        puts stderr "\t This module installs bidmach"
+        puts stderr " "
+}
+
+module-whatis   "installs bidmach"
+
+module load cudnn/5.1
+set package_root /home/srinivm/CentOS7/software/bidmach/1.0.3
+
+prepend-path PATH ${package_root}

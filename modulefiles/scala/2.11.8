@@ -1,0 +1,14 @@
+#%Module
+#
+proc ModulesHelp { } {
+        puts stderr " "
+        puts stderr "\t This module installs scala"
+        puts stderr " "
+}
+
+module-whatis   "installs scala"
+
+set package_root /home/srinivm/CentOS7/software/scala/2.11.8
+
+prepend-path SCALA_HOME ${package_root}
+prepend-path PATH ${package_root}/bin

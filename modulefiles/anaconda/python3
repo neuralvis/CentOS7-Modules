@@ -1,0 +1,13 @@
+#%Module
+#
+proc ModulesHelp { } {
+        puts stderr " "
+        puts stderr "\t This module installs python3"
+        puts stderr " "
+}
+
+module-whatis   "installs python3"
+
+set package_root /home/srinivm/CentOS7/software/anaconda/python3
+
+prepend-path PATH ${package_root}/bin

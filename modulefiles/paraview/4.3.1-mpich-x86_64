@@ -1,0 +1,25 @@
+#%Module
+#
+proc ModulesHelp { } {
+        puts stderr " "
+        puts stderr "\t This module provides ParaView version 4.3.1"
+        puts stderr " "
+}
+
+module-whatis   "ParaView Visualization Tool (4.3.1)"
+
+module load mpi/mpich-x86_64
+
+set package_root /home/srinivm/CentOS7/software/paraview/4.3.1-mpich-x86_64/
+
+prepend-path PATH "${package_root}/bin"
+prepend-path LD_LIBRARY_PATH "${package_root}/lib"
+prepend-path LD_LIBRARY_PATH "${package_root}/lib/paraview-4.3"
+prepend-path LD_LIBRARY_PATH "${package_root}/lib/paraview-4.3/site-packages/vtk"
+prepend-path PYTHONPATH "${package_root}/lib/paraview-4.3/site-packages"
+prepend-path PYTHONPATH "${package_root}/lib/paraview-4.3"
+prepend-path PYTHONPATH "${package_root}/lib/paraview-4.3/site-packages/vtk"
+prepend-path CMAKE_LIBRARY_PATH ${package_root}/lib
+prepend-path CMAKE_LIBRARY_PATH ${package_root}/lib/paraview-4.3
+append-path CMAKE_INCLUDE_PATH ${package_root}/include/paraview-4.3
+append-path CPLUS_INCLUDE_PATH ${package_root}/include/paraview-4.3

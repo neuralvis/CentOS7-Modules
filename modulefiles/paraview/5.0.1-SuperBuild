@@ -1,0 +1,23 @@
+#%Module
+#
+proc ModulesHelp { } {
+        puts stderr " "
+        puts stderr "\t This module provides ParaView version 5.0.1"
+        puts stderr " "
+}
+
+module-whatis   "ParaView Visualization Tool (5.0.1)"
+module load mpi/openmpi-x86_64
+set package_root /home/srinivm/CentOS7/software/paraview/5.0.1
+
+prepend-path PATH "${package_root}/bin"
+prepend-path LD_LIBRARY_PATH "${package_root}/lib"
+prepend-path LD_LIBRARY_PATH "${package_root}/lib/paraview-5.0"
+prepend-path LD_LIBRARY_PATH "${package_root}/lib/paraview-5.0/site-packages/vtk"
+prepend-path PYTHONPATH "${package_root}/lib/paraview-5.0/site-packages"
+prepend-path PYTHONPATH "${package_root}/lib/paraview-5.0"
+prepend-path PYTHONPATH "${package_root}/lib/paraview-5.0/site-packages/vtk"
+prepend-path CMAKE_LIBRARY_PATH ${package_root}/lib
+prepend-path CMAKE_LIBRARY_PATH ${package_root}/lib/paraview-5.0
+append-path CMAKE_INCLUDE_PATH ${package_root}/include/paraview-5.0
+append-path CPLUS_INCLUDE_PATH ${package_root}/include/paraview-5.0

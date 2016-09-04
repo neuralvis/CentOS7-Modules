@@ -1,0 +1,13 @@
+#%Module
+#
+proc ModulesHelp { } {
+        puts stderr " "
+        puts stderr "\t This module installs spark"
+        puts stderr " "
+}
+
+module-whatis   "installs spark"
+
+set package_root /home/srinivm/CentOS7/software/spark/2.0
+
+prepend-path PATH ${package_root}/bin

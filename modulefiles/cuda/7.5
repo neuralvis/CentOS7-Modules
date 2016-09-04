@@ -1,0 +1,19 @@
+#%Module
+#
+# CUDA 5.5.22
+#
+proc ModulesHelp { } {
+        puts stderr " "
+                puts stderr "\t This module installs CUDA "
+                        puts stderr " "
+                        }
+
+module-whatis   "installs CUDA 7.5"
+
+set package_root /usr/local/cuda-7.5/
+
+append-path PATH ${package_root}/bin
+append-path LIBRARY_PATH ${package_root}/lib64
+append-path LD_LIBRARY_PATH ${package_root}/lib64
+append-path CMAKE_LIBRARY_PATH ${package_root}/lib64
+append-path CMAKE_INCLUDE_PATH ${package_root}/include
