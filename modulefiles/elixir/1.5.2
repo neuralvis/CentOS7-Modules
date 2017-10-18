@@ -1,0 +1,15 @@
+#%Module
+#
+proc ModulesHelp { } {
+        puts stderr " "
+        puts stderr "\t This module installs elixir"
+        puts stderr " "
+}
+
+module-whatis   "installs elixir "
+
+module load erlang/20.1
+
+set package_root /home/srinivm/CentOS7/software/elixir/1.5.2
+
+prepend-path PATH ${package_root}/bin
