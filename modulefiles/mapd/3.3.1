@@ -1,0 +1,18 @@
+#%Module
+#
+proc ModulesHelp { } {
+        puts stderr " "
+                puts stderr "\t This module activates mapd"
+                        puts stderr " "
+                        }
+
+module-whatis   "activates the mapd envt"
+
+module load cuda/9.0.176
+
+set package_root /home/srinivm/CentOS7/software/mapd/3.3.1-gpu
+
+setenv MAPD_USER $::env(USER)
+setenv MAPD_GROUP "g-srinivm"
+setenv MAPD_STORAGE "/home/srinivm/.mapd/mapd"
+setenv MAPD_PATH "/home/srinivm/CentOS7/software/mapd/3.3.1-gpu"
