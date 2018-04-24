@@ -1,4 +1,4 @@
-#!/bin/bash
+OB#!/bin/bash
 
 cd $MAPD_PATH
-startmapd --data $MAPD_STORAGE
+./startmapd --data $MAPD_STORAGE

@@ -16,3 +16,4 @@ setenv MAPD_USER $::env(USER)
 setenv MAPD_GROUP "g-srinivm"
 setenv MAPD_STORAGE "/home/srinivm/.mapd/mapd"
 setenv MAPD_PATH "/home/srinivm/CentOS7/software/mapd/3.4.0-gpu"
+prepend-path PATH "/home/srinivm/CentOS7/software/mapd/3.4.0-gpu"
