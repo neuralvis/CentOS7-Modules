@@ -1,0 +1,19 @@
+#%Module
+#
+# CUDA 10.1
+#
+proc ModulesHelp { } {
+        puts stderr " "
+                puts stderr "\t This module installs CUDA "
+                        puts stderr " "
+                        }
+
+module-whatis   "installs CUDA 10.1"
+
+set package_root /usr/local/cuda-10.1/
+
+append-path PATH ${package_root}/bin
+append-path LIBRARY_PATH ${package_root}/lib64
+append-path LD_LIBRARY_PATH ${package_root}/lib64
+append-path CMAKE_LIBRARY_PATH ${package_root}/lib64
+append-path CMAKE_INCLUDE_PATH ${package_root}/include
