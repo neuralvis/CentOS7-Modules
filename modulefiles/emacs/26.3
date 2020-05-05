@@ -1,0 +1,18 @@
+#%Module
+#
+# Modulefile for emacs
+#
+# Madhu Srinivasan, Cray Inc.
+#
+proc ModulesHelp { } {
+        puts stderr " "
+        puts stderr "\t This module installs emacs"
+        puts stderr " "
+}
+
+module-whatis   "installs emacs v26.3"
+module load ncurses/6.1
+
+set package_root /lus/scratch/msrinivasa/CentOS7/software/emacs/26.3
+
+prepend-path PATH ${package_root}/bin

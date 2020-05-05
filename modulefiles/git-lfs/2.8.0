@@ -1,0 +1,13 @@
+#%Module
+#
+proc ModulesHelp { } {
+        puts stderr " "
+        puts stderr "\t This module installs VSCode"
+        puts stderr " "
+}
+
+module-whatis   "installs VSCode "
+
+set package_root /lus/scratch/msrinivasa/CentOS7/software/git-lfs
+
+prepend-path PATH ${package_root}/bin

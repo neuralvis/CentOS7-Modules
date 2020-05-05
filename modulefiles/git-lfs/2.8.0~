@@ -1,0 +1,13 @@
+#%Module
+#
+proc ModulesHelp { } {
+        puts stderr " "
+        puts stderr "\t This module installs VSCode"
+        puts stderr " "
+}
+
+module-whatis   "installs VSCode "
+
+set package_root /home/srinivm/CentOS7/software/vscode/VSCode-linux-x64
+
+prepend-path PATH ${package_root}/bin
