@@ -3,3 +3,4 @@ software
 software/*
 bootstrap_eb.py
 easybuild/software
+src
