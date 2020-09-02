@@ -1,0 +1,20 @@
+#%Module
+#
+proc ModulesHelp { } {
+        puts stderr " "
+        puts stderr "\t This module provides pbrt v3"
+        puts stderr " "
+}
+
+module-whatis   "pbrt v3"
+
+
+set package_root /lus/scratch/msrinivasa/CentOS7/software/pbrt/v3
+
+prepend-path PATH "${package_root}/bin"
+prepend-path LD_LIBRARY_PATH "${package_root}/lib"
+prepend-path LD_LIBRARY_PATH "${package_root}/lib64"
+prepend-path CMAKE_LIBRARY_PATH ${package_root}/lib
+prepend-path CMAKE_LIBRARY_PATH ${package_root}/lib64
+append-path CMAKE_INCLUDE_PATH ${package_root}/include
+append-path CPLUS_INCLUDE_PATH ${package_root}/include
